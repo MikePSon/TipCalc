@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="@color/bgColor">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/billAmt"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:layout_marginLeft="51dp"
+        android:layout_marginStart="51dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/bill_helper"
+        android:id="@+id/billHelper"
+        android:textColor="@color/white"
+        android:layout_below="@+id/billAmt"
+        android:layout_alignRight="@+id/billAmt"
+        android:layout_alignEnd="@+id/billAmt"
+        android:layout_marginRight="75dp"
+        android:layout_marginEnd="75dp" />
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical|center_horizontal"
+        android:checkedButton="@+id/select10"
+        android:baselineAligned="true"
+        android:id="@+id/radioGroup"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/billHelper"
+        android:layout_alignEnd="@+id/billHelper">
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/tip_helper"
+        android:id="@+id/textView"
+        android:textColor="@color/white"
+        android:layout_above="@+id/select10"
+        android:layout_alignRight="@+id/select10"
+        android:layout_alignEnd="@+id/select10" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/tip_Total"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/select18"
+        android:layout_alignLeft="@+id/billAmt"
+        android:layout_alignStart="@+id/billAmt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/currency_placeholder"
+        android:id="@+id/tipAmtField"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:textSize="@dimen/landscape_answers" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/total"
+        android:id="@+id/textView3"
+        android:layout_above="@+id/tipAmtField"
+        android:layout_alignRight="@+id/billAmt"
+        android:layout_alignEnd="@+id/billAmt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/currency_placeholder"
+        android:id="@+id/mealTotalField"
+        android:textColor="@color/green"
+        android:background="@color/bgColor"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:textSize="@dimen/landscape_answers" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/radio10"
+        android:id="@+id/select10"
+        android:onClick="onRadioButtonClicked"
+        android:layout_marginRight="109dp"
+        android:layout_marginEnd="109dp"
+        android:layout_alignTop="@+id/billAmt"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/radio15"
+        android:id="@+id/select15"
+        android:onClick="onRadioButtonClicked"
+        android:layout_below="@+id/select10"
+        android:layout_alignLeft="@+id/select10"
+        android:layout_alignStart="@+id/select10" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/radio18"
+        android:id="@+id/select18"
+        android:onClick="onRadioButtonClicked"
+        android:layout_below="@+id/select15"
+        android:layout_alignLeft="@+id/select15"
+        android:layout_alignStart="@+id/select15" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/radio20"
+        android:id="@+id/select20"
+        android:onClick="onRadioButtonClicked"
+        android:layout_below="@+id/select18"
+        android:layout_alignLeft="@+id/select18"
+        android:layout_alignStart="@+id/select18" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/radio25"
+        android:id="@+id/select25"
+        android:onClick="onRadioButtonClicked"
+        android:layout_below="@+id/select20"
+        android:layout_alignLeft="@+id/select20"
+        android:layout_alignStart="@+id/select20" />
+
+
+</RelativeLayout>
